@@ -17,6 +17,15 @@ module.exports = (server) => {
     }
 
     await server.methods.dao.score.create(request.payload)
+
+    return getCurrentPosition(request.payload.token)
+  }
+
+  function getCurrentPosition (token) {
+    // logic for getting the position in the score list
+    return {
+      position: 123
+    }
   }
 
   return {
